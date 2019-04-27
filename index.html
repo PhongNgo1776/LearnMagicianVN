@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, minimal-ui" />
+<meta http-equiv="Content-Type" content="text/html" />
+<meta name="robots" content="index,nofollow" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Học làm phù thủy</title>
+
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+ 
+<script>
+	var debug = false;
+	var pid = 50; 
+	var gid = 278;
+	var dev = 2;
+	var premiumGame = 0;
+	var endlessGame = 1;
+	var autoInitGame = true;
+	var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i);
+	var adBlocked = true;
+	var gameAtlasURL = 'images/game_atlas_' + (isMobile?'tiny':'') + '.png';
+	var imageLoaderCssData = 'data:image/png;base64,YTBkMGIzZDcwMjU2MzdjNjE2NjYwMmQzMDI1NjY3OTY0NzM2MTRjNmM2ZjYyNzQ2OTZkNmUyNzY2NjM0Mzc0NjE2MDJkMzAyNTY2Nzk2NDczNjE0YzZjNmY2Mjc1NjI3MDdlMjc2NjYzNDM3NDYxNjAyYjcwMjkyMDI5MmQ1NzI4N2Q2ZTI5NjA3NTY5NzcyMDJjMjcyZDZmNjM2ZTI0NzY2ZjYzNzQzMDc5NjY3NzIwMmMyNzJkNmY2MzZlMjAzMTM5NjM3OTYzNzcyMDJjMjcyZDZmNjM2ZTIwMzEzNTYwNzU2MDc3MjAyYzI3MjI3MjZlMmQ2ZjYzNmUyNTZlNjk2YzZlNmY2MzdmNjc2ZjZhNjk2YTc5NmI2NzIwMmMyNzI4N2Q2ZTI5NmE3OTZiNjcyMDJjMjcyNDc1NmU2ZTIzNzU2ZDYxNjc2OTY5NjE2NzcxNmI2NzIwMmMyNzJkNmY2MzZlMjMzOTYwNzU2OTczN2Y2NzY1NjU3YTY3MjAyYzI3MmY2MzZlMmQ2ZjYzNmUyMzMzMzczMzdmNjc2NTY1N2E2NzIwMmMyNzI0NzA3ZTIzNzE2NjYzN2Y2NzZmNmE2NzIwMmMyNzJkNmY2MzZlMmY2YzYxNjc2ZjZhNjcyMDJjMjcyZjYyN2UyOTZhNzk2ZDI5NjI3NTczNmY2YTY3MjAyYzI3Mjc2MjdmNmUyMzc1NmQ2MTY3NmQyNTYzNzI3ZjY4NjcyMDJjMjcyYzYwN2UyMTY5NjQ2ZTYxNmM2MTYyNzc2NzIwMmMyNzIyNzQ3ZTJkNmY2MzZlMjY3OTYyNzY2NzIwMmMyNzI0NzU2ZTZlMjI3MTZjNmU2NTc5N2Y2YzY1NmE3NTc3NmU2NTY3MjAyYzI3MmQ2ZjYzNmUyOTc4NmQ2MjcxNjcyYjU4Mjk0MjU1NTk3MTYyNzI3MTRlNjk2MDI4MjY2OTYwMjAyMDIwMmEwZDAwMjAyMDIwMmEwZDBiM2Q1MDJkNzcyNDczNzk2NDdlNjU2NDZkMmM2MTY1NjI3ZDI1NmM2YzY1NmY2ZTY3MmEzNjYzNzAyYzI3MjQ3Mzc5NjQ3ZTY1NjQ2ZDJjNjE2NTYyN2QyNTZjNmM2NTZmNmU2NzJhMzM3MDJjMjIzYTM0NmI3MDJjMmQ3NzIxNjA3MzdkMjM3YzY5NjE2ZTZkMjk3NDc1NzE2NTYyNmQyZTYyNzU2NDZmNmQ2NzJhMzY2MzcwMmMyNzIxNjA3MzdkMjM3YzY5NjE2ZTZkMjk3NDc1NzE2NTYyNmQyZTYyNzU2NDZmNmQ2NzJhMzM3MDJjMjEzYTM0NmI3MDJjMmQ3NzIyNzU2NjdmNjU2YjYxNmQ2ZDJjNjE2NTYyN2QyMzc1N2Y2MjdmNmQ2MTZjNjc2ZDIzNzk3NTYyNzQ2NTcxNjcyYTM2NjM3MDJjMjcyMjc1NjY3ZjY1NmI2MTZkNmQyYzYxNjU2MjdkMjM3NTdmNjI3ZjZkNjE2YzY3NmQyMzc5NzU2Mjc0NjU3MTY3MmEzMzcwMmMyMTNhMzQ2YjcwMmMyZDc3MmU2ZjZjNjE2MzdkMjk3NDc1NzE2NTYyNmQyNTY5NjM3Mzc1NmE2NzJhMzY2MzcwMmMyNzJlNmY2YzYxNjM3ZDI5NzQ3NTcxNjU2MjZkMjU2OTYzNzM3NTZhNjcyYTMzNzAyYzIyM2EzNDZiNzAyYzJkNzcyMDc1N2QyMzczNzU2Mjc0NmQyZTY1NjU2NzdmNmM2YzYxNjg2ZDIzNzM3NTYzNmU2OTYyNzA3ZDI1NjQ3MTYyNzk2MDc3MmEzNjYzNzAyYzI3MjA3NTdkMjM3Mzc1NjI3NDZkMmU2NTY1Njc3ZjZjNmM2MTY4NmQyMzczNzU2MzZlNjk2MjcwN2QyNTY0NzE2Mjc5NjA3NzJhMzM3MDJjMjEzYTM0NmI3MDIwMmI1MDJkMzAyMzcyNmQ2NTc4NjQ1NTZkNjE2NzZlNjk2MDIyNzE2Njc5MDAyYjNkNzcyZjJkNzc2NTdjNjM3YjdmMjM3NTZkNjE2NzZmMmQ2ZjYzNmUyNDZmNjA3OTcxNmM2MDdlMmQ2ZjJmMmEzMDc0NzQ3ODY3MjAyYTMyNmY2ZDYwMmMyNzJjNmQ2NDc4NmUyZDc3NjU3YzYzN2I3ZjI4Nzk2ZDZmMmQ2ZjYzNmUyNDZmNjA3OTcxNmM2MDdlMjc3Nzc3N2YyZjJhMzA3NDc0Nzg2NzIwMmEzYjYzNzU2NDZiNzAyZDMwMmQ1NDNiNTM3YzYyNzU1MjZkNjU3ODY0NzAyYjNkNzcyZjJkNzc2NTdjNjM3YjdmMjM3NTZkNjE2NzZmMjM3NTZkNjE2NzZlMjA3ZjYwN2UyZDZmMmYyYTMwNzQ3NDc4NjcyMDJhMzI2ZjZkNjAyYzI3MmM2ZDY0Nzg2ZTJkNzc2NTdjNjM3YjdmMjU2ZDYxNjc2ZjIzNzU2ZDYxNjc2ZTIwN2Y2MDdlMjc3Nzc3N2YyZjJhMzA3NDc0Nzg2NzIwMmEzYjYzNzU2NDZiNzAyZDMwMmQ1MzNiNTM3YzYyNzU1MjZkNjU3ODY0NzAyYjNkNzcyZjJkNzc2NTdjNjM3YjdmMjM3NTZkNjE2NzZmMmQ2ZjYzNmUyNzZjNjI3OTY3NmUyZDZmMmYyYTMwNzQ3NDc4NjcyMDJhMzI2ZjZkNjAyYzI3MmM2ZDY0Nzg2ZTJkNzc2NTdjNjM3YjdmMjU2ZDYxNjc2ZjJkNmY2MzZlMjc2YzYyNzk2NzZlMjc3Nzc3N2YyZjJhMzA3NDc0Nzg2NzIwMmEzYjYzNzU2NDZiNzAyZDMwMmQ1MjNiNTM3YzYyNzU1MjZkNjU3ODY0NzAyYjNkNzcyZjJkNzc2NTdjNjM3YjdmMjM3NTZkNjE2NzZmMmQ2ZjYzNmUyOTcxNmM2MDczN2M2Mjc5Njc2ZTJkNmYyZjJhMzA3NDc0Nzg2NzIwMmEzMjZmNmQ2MDJjMjcyZjJkNzc2NTdjNjM3YjdmMjU2ZDYxNjc2ZjJkNmY2MzZlMjk3MTZjNjA3MzdjNjI3OTY3NmUyNzc3Nzc3ZjJmMmEzMDc0NzQ3ODY3MjAyYTNiNjM3NTY0NmI3MDJkMzAyZDUxM2I1MzdjNjI3NTUyNmQ2NTc4NjQ3OTBhMGQwYjNkNWI1MDJkMzAyMzdjNjI3NTUyNmQ2NTc4NjQ3MDIyNzE2Njc5MGEwZDBiM2Q3MDNhMzIzNDdjMjAzYTMxMzQ3YjcwMmQzMDJjNjA3ZTJiNmM2NzYwMjkyOTJiNmM2NzYwMmU2OTYwMjcyYzYwNzcyODIxMjgyNjY5NjkwZDdhMGQwYjM3MjI3NTY2N2Y2NTZkNjE2NzY3MjAyZDMwMmU2ZjY5NjQ3MTYzNmY2YzRjNmM2ZjYyNzQ2OTZkNmUyNzY2NjM0Mzc0NjE2YTBkMGIzNzJjNmM2MTY3MmQzYjZjNjI2MDIyNzE2NjdhMGQwYjcwMjkyMDIxM2QyMDJkMzEyMDI5MjIyMzc1NmQ2MTY3NmUyMDdmNjA3MjI4MjY2ZjQ4NzU2NDZlNjk2ZTIyNzU2MjcyNzU2NjY1NjI3ZTI0N2U2NTZkNjU3MzZmNjQ2MDI4MjY2OTY5MGEwZDBiM2Q3YjcwMmQzMDJiNmM2NzYwMjI3MTY2NzkwYTBkMGIzZDc3MjI3NTY2N2Y2NTZkNjE2NzYwMmMyYzY1NjY3NTZjNjI3NTY0N2U2OTYwMmMyNTZkNjE2NzZlNjk2MDJjMjI3NTY0NjE2ZjZjNjU2MjcwNzcyMDJhM2U2ZjY5NjQ3MTYzNmY2YzQzN2M2OTYxNmU2MjZkNjU3ODY0NzAyYzI3MmI2MzZmNmM2ZTY1NzAyYzIyNzU2NjdmNjU2ZDYxNjc2MDJjMmM2NTY2NzU2YzYyNzU2NDdlNjk2MDJjMmY2Mjc0N2U2OTY3MjAyYTNlNmY2OTY0NzE2MzZmNmM0YzZjNmY2Mjc0Njk2ZDYwMmMyNTY1NzI3NDcwMmEzNTY2Nzk2NDczNjE0YzZjNmY2Mjc0Njk2ZDYwMmMyNTYzN2M2MTY2NjAyYTM1NjY3OTY0NzM2MTRjNmM2ZjYyNzU2MjcwNzAyYzIwMzMzMDJhMzc2ZTY5NjA3MDcxNjM2MDJjMjUzMDJhMzI3NTZkNjk2NDUwNzk2YjYzNzAyYzI1MzEzMDJhMzI3NTZkNjk2NDU1NjM3ZjZjNjM2ZjY0NzU3MTYwMmMyNDY5Njc2YTM0Njk2NzYwMmMyMDM1M2EzNDY5NjA3YjcwMmQzMDI3NjY2MzQzNzQ2MTYwMjI3MTY2NzkwYTBkMGIzNzJmNjU2NDY5NjY1ZjViNjI3ZjY3NzQ3NTZlNGY1NTNjNGQ0NDU4NDcyMDJkMzAyYzZjNmY2Mjc1NjI3MDU0N2Y2YzYzNTQ2MTYwMjI3MTY2NzkwYTBkMGIzNzI5NzI3ZjY0NzM2MTY2NmQyYzZjNjU2MDczN2QyMzc5NzU2Mjc0NjU3MTZkM2U2NzY5NjE2MDdkNjE2MzZmNWQ2NDc1NzYyZTZmNjk2NDcxNjU2MjczNmY1NTYyNzE2ODYzN2Y1NTNjNmQ2NDc4NmQzZDY1Nzk2NDY1NmQ2ZjVkNjQ3NTc2MjcyYjI5MjgyYzQyNTU1NDczN2Y2ODQ0NzU2NzZiMjcyZDM1NjM2Mjc1N2Y2MzdmNWQ2NDc1N2YzYzZkNjQ3ODZlMjk3MjdmNjQ3MzYxNjY2ZDJjNmM2NTYwNzM3ZDIzNzk3NTYyNzQ2NTcxNmYyNTZkNjE2NzZmMjM3NTZkNjE2NzZlMjA3ZjYwN2UyNzc3Nzc3ZjJmMmEzMDc0NzQ3ODY3MjAyZDMwMmM0MjU1NTU2MjcxNjg2MzcwMjI3MTY2NzkwYTBkMGIzNzI3MjAyZDMwMmM0MjU1NWY2NzZmNmM0Mjc1NmU2NDcyNzE2MDcwMjI3MTY2N2YyZjI5MGEwZDBiMzcyNzIwMmQzMDI1Njc2MTZkNjk0ZjY3NmY2YzQyNzU2ZTY0NzI3MTYwNzAyMjcxNjY3OTBhMGQwOTBhMGQwYjM3Mjc2ZTYwN2UyMjNmNjc2ZjZjNmYyMzc1Njc2MTZkNjk2ZDIzNzU2ZDYxNjc2ZjI1M2M2ZDY0Nzg2ZjI3MjAyZDMwMmY2NzZmNmM0NzZlNjk2NDZlNjE2MjcyNjAyMjcxNjY3OTBhMGQwYjM3Mjc2MDdhNmUyMjMyNzU2NDYxNmY2YzY1NjI3MDdmMjM3NTY3NjE2ZDY5NmQyMzc1NmQ2MTY3NmYyNTNjNmQ2NDc4NmYyNzIwMmQzMDI3NjI0Mjc1NjQ2MTZmNmM2NTYyNzA3MDIyNzE2Njc5MGEwZDBiMzcyZDZmNjM2ZTI3NmM2Mjc5Njc2ZTI3Nzc3NzdmMmYyYTMwNzQ3NDc4NjcyMDJkMzAyYzQyNTU1NzZlNjk2NDZlNjE2MjcyNjAyMjcxNjY3OTA=';
+    
+    
+	</script>
+
+ 
+<script src="./games-api/init-witchhut-game-5.0.js"></script>
+</head>
+<script src="jquery-1.11.3.min.js"></script>
+
+<div id="logo" style="position: fixed;
+    top: 10px;
+    z-index: 9999;
+    text-align: left;
+    width: 12%; -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;">
+   <a style="padding:20px" href="//game24h.vn" target="_blank"><img src="logo.png" style="width:100%"/></a>
+   </div>
+
+   <script type="text/javascript">
+
+   var site_logo = setInterval(function(){
+   var p = $( "canvas:first" );
+  var offset = p.offset();
+$("#logo").css("width", ((p.outerWidth() /755) *90) + "px");
+  $("#logo").css("left", (offset.left + 0) + "px");
+  $("#logo").css("top", (offset.top +25) + "px");
+  },50);
+   </script>
+<body>
+<div id="game-container">
+<a id="spinner" ><div class="tinyloader"><img src="./games-images/loader-girl.jpg" width="200" height="257" /></div></a>
+<div class="img-loader"><img src="./games-images/preloader1.jpg" /></div> <canvas id="canvas" width="800" height="600"></canvas>
+</div>
+ 
+ 
+<script src="./games-api/easeljs-1.0.0.min.js"></script>
+<script src="./games-api/tweenjs-1.0.0.min.js"></script>
+<script src="./games-api/preloadjs-1.0.0.min.js"></script>
+<script src="./games-api/soundjs-1.0.0.min.js"></script>
+<script src="./games-api/movieclip-1.0.0.min.js"></script>
+<script src="./games-api/proton-1.0.0.min.js"></script>
+<script src="./games-api/bitmapdata-1.1.1.min.js"></script>
+<script src="game.js"></script>
+<script>
+	 initGame();
+</script>
+</body>
+</html>
