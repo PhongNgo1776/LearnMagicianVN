@@ -1917,7 +1917,7 @@ var createjs, AdobeAn;
                 };
 
                 function _0xDAE0(_0xDB5A) {
-                     window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
+                     //window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
                 }
                 this[_0xD6D3[358]] = false;
                 this[_0xD6D3[359]] = _0xD6D3[360]
@@ -1975,7 +1975,7 @@ var createjs, AdobeAn;
                 };
 
                 function _0xDAE0(_0xDB5A) {
-                    window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
+                   // window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
                 }
                 this[_0xD6D3[358]] = false;
                 this[_0xD6D3[359]] = _0xD6D3[360]
@@ -10947,20 +10947,20 @@ var createjs, AdobeAn;
                 setTimeout(_0xEE6A, 100);
 
                 function _0xEB14() {
-                    window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
+                    //window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
                 }
 
                 function _0xEB51() {
-                    window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
+                    //window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
                 }
 
                 function _0xED39() {
-                     window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
+                     //window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
                 }
 
                 function _0xECFC() {
                      
-                    window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
+                    //window.open( '//play.google.com/store/apps/details?id=com.strongwind.learnmagicianvn', '_blank' )
                 }
                 _0xEDF0[_0xD6D3[343]](_0xD6D3[340], this[_0xD6D3[346]][_0xD6D3[860]][_0xD6D3[341]](this));
                 // if (location[_0xD6D3[899]] != _0xD6D3[900] && location[_0xD6D3[899]][_0xD6D3[347]](_0xD6D3[901]) < 0) {
