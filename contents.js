@@ -1,4 +1,4 @@
-export default (Contents = {
+{
     data: [
             {
                 id: 1,
@@ -690,4 +690,4 @@ export default (Contents = {
             }
             
         ]
-});
+}
